@@ -1,0 +1,43 @@
+Arguments: 
+  /Users/user/.nvm/versions/node/v16.19.0/bin/node /Users/user/.nvm/versions/node/v16.19.0/bin/yarn global dir
+
+PATH: 
+  /Users/user/.nvm/versions/node/v16.19.0/bin:/usr/local/opt/openssl@3/bin:/usr/local/opt/openssl@3/bin:/usr/local/opt/openssl@3/bin:/usr/local/opt/openssl@3/bin:/usr/local/opt/openssl@3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/openssl@3/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.19.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EPERM: operation not permitted, scandir '/Users/user/Desktop'
+
+npm manifest: 
+  {
+    "name": "everychain-videos",
+    "license": "UNLICENSED",
+    "scripts": {
+      "codegen": "graph codegen",
+      "build": "graph build",
+      "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ everychain-videos",
+      "create-local": "graph create --node http://localhost:8020/ everychain-videos",
+      "remove-local": "graph remove --node http://localhost:8020/ everychain-videos",
+      "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 everychain-videos",
+      "test": "graph test"
+    },
+    "dependencies": {
+      "@graphprotocol/graph-cli": "0.37.2",
+      "@graphprotocol/graph-ts": "0.29.1"
+    },
+    "devDependencies": { "matchstick-as": "0.5.0" }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

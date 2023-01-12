@@ -1,0 +1,21 @@
+type CommentAdded @entity(immutable: true) {
+  id: Bytes!
+  text: String! # string
+  user: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type VideoUploaded @entity(immutable: true) {
+  id: Bytes!
+  assetId: String! # string
+  title: String! # string
+  videoUrl: String! # string
+  description: String! # string
+  creator: Bytes! # address
+  views: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
