@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: EveryChainVids
+    network: goerli
+    source:
+      address: "0xcDe94dFcEC5af2760ad761dc3D86db93D39a3712"
+      abi: EveryChainVids
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - CommentAdded
+        - VideoUploaded
+      abis:
+        - name: EveryChainVids
+          file: ./abis/EveryChainVids.json
+      eventHandlers:
+        - event: CommentAdded(string,address)
+          handler: handleCommentAdded
+        - event: VideoUploaded(string,string,string,string,address,uint256)
+          handler: handleVideoUploaded
+      file: ./src/every-chain-vids.ts
